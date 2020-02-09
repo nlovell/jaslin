@@ -58,13 +58,13 @@ public class Main {
         String ip = OSUtils.getIP();
 
         if (OSUtils.supportedOSContains(os)) {
+            System.out.println("JASLiN node at " + ip + " is starting as Client");
             Client client = new Client();
          } else {
             System.out.println("Sorry, operating system " + os
                     + " is currently unsupported to run as a JASLiN client!");
             return false;
         }
-        System.out.println("JASLiN node at " + ip + " is starting as Client");
         return true;
     }
 
@@ -73,8 +73,8 @@ public class Main {
         String ip = OSUtils.getIP();
 
         if (OSUtils.supportedOSContains(os)) {
-            Server server = new Server();
             System.out.println("JASLiN node at " + ip + " is starting as Server");
+            Server server = new Server();
             return true;
         } else {
             System.out.println("Sorry, operating system " + os

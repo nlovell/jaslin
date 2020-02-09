@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13b5882b-7f31-4172-b9fe-ad9c9ec220fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/twinb.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/log4j.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/FFMPEG.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/jaslin.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/tools/OSUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/tools/OSUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/tools/SupportedOS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/tools/SupportedOS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/jaslin.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/CLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/CLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/tools/data/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/tools/data/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +53,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\repositories\jaslin\src\main\java\net\nlovell\jaslin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alan.lovell\IdeaProjects\jaslin\src\main\java" />
     </key>
@@ -107,21 +113,60 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1581274909456">
+    <state x="872" y="359" key="#Project_Structure" timestamp="1581275039122">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581274909456" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1581274909456">
+    <state x="872" y="359" key="#Project_Structure/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581275039122" />
+    <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581275045787">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581274909456" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1581274909455">
+    <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581275045787" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1581279361374">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581274909455" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1581274909456">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279361374" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1581279361374">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581274909456" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279361374" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1581279361373">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279361373" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1581279361374">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279361374" />
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1581279218111">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279218111" />
+    <state width="2517" height="492" key="GridCell.Tab.1.center" timestamp="1581279218111">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.center/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279218111" />
+    <state width="2517" height="492" key="GridCell.Tab.1.left" timestamp="1581279218110">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.left/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279218110" />
+    <state width="2517" height="492" key="GridCell.Tab.1.right" timestamp="1581279218111">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279218111" />
+    <state x="810" y="356" key="Maven.ArtifactSearchDialog" timestamp="1581277572112">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="810" y="356" key="Maven.ArtifactSearchDialog/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581277572112" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/FFMPEG.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
