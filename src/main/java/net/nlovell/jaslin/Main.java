@@ -5,6 +5,7 @@ import net.nlovell.jaslin.nodes.server.Server;
 import net.nlovell.jaslin.tools.OSUtils;
 import net.nlovell.jaslin.tools.data.ClientServerEnum;
 import net.nlovell.jaslin.tools.data.Constants;
+import org.apache.log4j.BasicConfigurator;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -13,7 +14,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class Main {
 
     public static void main(String... args){
+        BasicConfigurator.configure();
         System.out.println(Constants.JASLIN_LOGO_COLOUR);
+
 
         boolean isServer = false;
         boolean isClient = false;

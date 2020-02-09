@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="13b5882b-7f31-4172-b9fe-ad9c9ec220fc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/FFMPEG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/FFMPEG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,22 +116,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581275045787" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1581279692785">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1581284233315">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279692785" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1581279692785">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581284233315" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1581284233315">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279692785" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1581279692784">
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581284233315" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1581284233314">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279692784" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1581279692785">
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581284233314" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1581284233315">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581279692785" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581284233315" />
     <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1581279218111">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -149,16 +152,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="810" y="356" key="Maven.ArtifactSearchDialog/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581277572112" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/FFMPEG.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="976" y="432" width="607" height="536" key="find.popup" timestamp="1581283952263">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="976" y="432" width="607" height="536" key="find.popup/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581283952263" />
   </component>
 </project>

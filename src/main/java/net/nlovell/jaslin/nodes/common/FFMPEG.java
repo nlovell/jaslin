@@ -2,7 +2,6 @@ package net.nlovell.jaslin.nodes.common;
 
 import net.nlovell.jaslin.tools.OSUtils;
 import net.nlovell.jaslin.tools.data.Constants;
-import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import java.io.*;
@@ -13,15 +12,15 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Enumeration;
-import java.util.Objects;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 
 public class FFMPEG {
+    Logger logger = Logger.getLogger(FFMPEG.class);
 
-    public boolean isFFMPEGAvailable() {
-        Logger logger = Logger.getLogger(FFMPEG.class);
+
+    public String getFFPMEGLocation() {
         File dir = new File("ffmpeg");
         dir.mkdirs();
         File[] folders = dir.listFiles(File::isDirectory);
@@ -29,19 +28,24 @@ public class FFMPEG {
 
         for (File folder : folders) {
             if (folder != null && Files.exists(Paths.get(folder + "/bin/ffmpeg.exe"))) {
-                logger.info("FFMPEG is available.");
-                return true;
+                logger.info("FFMPEG found at " + String.valueOf(folder));
+                return String.valueOf(folder);
             }
         }
+        return null;
+    }
 
-        logger.info("FFMPEG is not available.");
-        return false;
-
+    public boolean isFFMPEGAvailable() {
+        if (getFFPMEGLocation() == null) {
+            logger.info("FFMPEG is not available.");
+            return false;
+        } else {
+            logger.info("FFMPEG is available.");
+            return true;
+        }
     }
 
     public boolean downloadFFMPEG() {
-        Logger logger = Logger.getLogger(FFMPEG.class);
-
         //Download FFMPEG for Windows
         if (OSUtils.getOsType().equals("windows")) {
             String url = Constants.FFMPEGWindows;
@@ -64,13 +68,14 @@ public class FFMPEG {
 
     private void unzip(final String zip, final File destination) throws IOException {
         File srcFile = new File(zip);
-
-        destination.mkdir();
+        if(destination.mkdir()){
+            logger.info("FFMPEG directory not found; created at " + destination);
+        }
 
         ZipFile zipFile = null;
 
         try {
-
+            logger.info("Attempting to extract FFMPEG");
             zipFile = new ZipFile(srcFile);
 
             // get an enumeration of the ZIP file entries
@@ -89,7 +94,7 @@ public class FFMPEG {
                     continue;
                 } else {
 
-                    System.out.println("Extracting file: " + destinationPath);
+                    logger.debug("Extracting file: " + destinationPath);
                     FileOutputStream fos = new FileOutputStream(destinationPath);
 
                     try (BufferedInputStream bis = new BufferedInputStream(zipFile.getInputStream(entry));
@@ -107,14 +112,14 @@ public class FFMPEG {
             }
 
         } catch (IOException ioe) {
-            System.out.println("Error opening zip file" + ioe);
+            logger.error("Error opening zip file" + ioe);
         } finally {
             try {
                 if (zipFile != null) {
                     zipFile.close();
                 }
             } catch (IOException ioe) {
-                System.out.println("Error while closing zip file" + ioe);
+                logger.error("Error while closing zip file" + ioe);
             }
         }
     }

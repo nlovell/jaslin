@@ -13,7 +13,6 @@ public class Server {
         WebServer ws = new WebServer(jp);
 
         Logger logger = Logger.getLogger(Server.class);
-        BasicConfigurator.configure();
 
         logger.debug("Server attempted construction");
         FFMPEG ffmpeg = new FFMPEG();
