@@ -18,6 +18,7 @@ public class Server {
 
         if (!FFMPEG.isFFMPEGAvailable()) FFMPEG.downloadFFMPEG();
         logger.debug(CLI.getDevices());
+
     }
 
 
