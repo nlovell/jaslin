@@ -79,7 +79,6 @@ public class FFMPEG {
             while (e.hasMoreElements()) {
 
                 ZipEntry entry = e.nextElement();
-
                 File destinationPath = new File(destination, entry.getName());
 
                 //create parent directories
@@ -91,23 +90,18 @@ public class FFMPEG {
                 } else {
 
                     System.out.println("Extracting file: " + destinationPath);
-             
-                    BufferedInputStream bis = new BufferedInputStream(zipFile.getInputStream(entry));
-
-                    int b;
-                    byte buffer[] = new byte[1024];
-
                     FileOutputStream fos = new FileOutputStream(destinationPath);
 
-                    BufferedOutputStream bos = new BufferedOutputStream(fos, 1024);
+                    try (BufferedInputStream bis = new BufferedInputStream(zipFile.getInputStream(entry));
+                         BufferedOutputStream bos = new BufferedOutputStream(fos, 1024)
+                    ) {
+                        int b;
+                        byte buffer[] = new byte[1024];
 
-                    while ((b = bis.read(buffer, 0, 1024)) != -1) {
-                        bos.write(buffer, 0, b);
+                        while ((b = bis.read(buffer, 0, 1024)) != -1) {
+                            bos.write(buffer, 0, b);
+                        }
                     }
-
-                    bos.close();
-                    bis.close();
-
                 }
 
             }
