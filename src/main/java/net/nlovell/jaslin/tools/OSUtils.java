@@ -7,10 +7,15 @@ import java.net.UnknownHostException;
 
 public class OSUtils {
 
-    public static String getOS() {
-        return "windows";
-    }
+    private static String osName = null;
+    private static String osType = null;
 
+    public static String getOSName() {
+        if (osName == null) {
+            osName = System.getProperty("os.name").toLowerCase();
+        }
+        return osName;
+    }
     public static String getIP() {
         //Attempt to ping Google, and log the outbound result
         String ip = null;
@@ -23,11 +28,40 @@ public class OSUtils {
         return ip;
     }
 
-    public static boolean supportedOSContains(String compare){
-        for(SupportedOS enom : SupportedOS.values()){
-            if(String.valueOf(enom).equals(compare))
+    public static boolean supportedOSContains(final String compare) {
+        String osString = compare.replaceAll(" ", "_").toUpperCase();
+        for (SupportedOS enom : SupportedOS.values()) {
+            if (String.valueOf(enom).equals(osString))
                 return true;
         }
         return false;
+    }
+
+    public static String getOsType() {
+        if (osType == null) {
+            if (isWindows()) {
+                osType = "windows";
+            } else if (isUnix()) {
+                osType = "unix";
+            } else if (isMac()) {
+                osType = "mac";
+            } else {
+                osType = "unknown";
+            }
+
+        }
+        return osType;
+    }
+
+    public static boolean isWindows() {
+        return getOSName().startsWith("windows");
+    }
+
+    public static boolean isUnix() {
+        return getOSName().startsWith("nix") || getOSName().startsWith("nux") || getOSName().startsWith("aix");
+    }
+
+    public static boolean isMac() {
+        return getOSName().startsWith("mac");
     }
 }

@@ -1,6 +1,7 @@
 package net.nlovell.jaslin.tools;
 
 public enum SupportedOS {
-    windows;
+    WINDOWS_10,
+    WINDOWS_7;
 }
 

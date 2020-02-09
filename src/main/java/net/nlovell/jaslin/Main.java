@@ -2,7 +2,6 @@ package net.nlovell.jaslin;
 
 import net.nlovell.jaslin.nodes.client.Client;
 import net.nlovell.jaslin.nodes.server.Server;
-import net.nlovell.jaslin.tools.MyInt;
 import net.nlovell.jaslin.tools.OSUtils;
 import net.nlovell.jaslin.tools.data.ClientServerEnum;
 import net.nlovell.jaslin.tools.data.Constants;
@@ -12,26 +11,8 @@ import java.awt.event.KeyEvent;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Main {
-    public static void main(String[] args) {
-        MyInt a = new MyInt(1);
-        MyInt b = a;//.copy();
-        System.out.println("\na=b\na: " + a);
-        System.out.println("b: " + b);
 
-        b.setMe(2);
-        System.out.println("\nb.set(2)\na: " + a);
-        System.out.println("b: " + b);
-
-        b = a.copy();
-        System.out.println("\nb=a.copy\na: " + a);
-        System.out.println("b: " + b);
-
-        b.setMe(3);
-        System.out.println("\nb.set(3)\na: " + a);
-        System.out.println("b: " + b);
-    }
-
-    public void doStuff(String... args){
+    public static void main(String... args){
         System.out.println(Constants.JASLIN_LOGO_COLOUR);
 
         boolean isServer = false;
@@ -73,7 +54,7 @@ public class Main {
     }
 
     private static boolean startClient() {
-        String os = OSUtils.getOS();
+        String os = OSUtils.getOSName();
         String ip = OSUtils.getIP();
 
         if (OSUtils.supportedOSContains(os)) {
@@ -88,7 +69,7 @@ public class Main {
     }
 
     private static boolean startServer(String[] args) {
-        String os = OSUtils.getOS();
+        String os = OSUtils.getOSName();
         String ip = OSUtils.getIP();
 
         if (OSUtils.supportedOSContains(os)) {
