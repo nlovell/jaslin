@@ -22,7 +22,6 @@ public class FFMPEG {
 
     public boolean isFFMPEGAvailable() {
         Logger logger = Logger.getLogger(FFMPEG.class);
-        BasicConfigurator.configure();
         File dir = new File("ffmpeg");
         dir.mkdirs();
         File[] folders = dir.listFiles(File::isDirectory);
@@ -42,7 +41,6 @@ public class FFMPEG {
 
     public boolean downloadFFMPEG() {
         Logger logger = Logger.getLogger(FFMPEG.class);
-        BasicConfigurator.configure();
 
         //Download FFMPEG for Windows
         if (OSUtils.getOsType().equals("windows")) {
@@ -93,7 +91,7 @@ public class FFMPEG {
                 } else {
 
                     System.out.println("Extracting file: " + destinationPath);
-
+             
                     BufferedInputStream bis = new BufferedInputStream(zipFile.getInputStream(entry));
 
                     int b;
