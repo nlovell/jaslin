@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13b5882b-7f31-4172-b9fe-ad9c9ec220fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/CommandRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/CLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/CLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/FFMPEG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/common/FFMPEG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/nlovell/jaslin/nodes/server/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +61,20 @@
       <recent name="C:\Users\alan.lovell\IdeaProjects\jaslin\src\main\java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="CommandRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.nlovell.jaslin.nodes.common.CommandRunner" />
+      <module name="jaslin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.nlovell.jaslin.nodes.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="net.nlovell.jaslin.Main" />
       <module name="jaslin" />
@@ -75,6 +92,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.CommandRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -116,22 +134,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581275045787" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1581285373553">
+    <state width="1258" height="401" key="GridCell.Tab.0.bottom" timestamp="1581288833832">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581285373553" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1581285373552">
+    <state width="1258" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581288833832" />
+    <state width="1258" height="401" key="GridCell.Tab.0.center" timestamp="1581288833832">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581285373552" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1581285373552">
+    <state width="1258" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581288833832" />
+    <state width="1258" height="401" key="GridCell.Tab.0.left" timestamp="1581288833832">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581285373552" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1581285373552">
+    <state width="1258" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581288833832" />
+    <state width="1258" height="401" key="GridCell.Tab.0.right" timestamp="1581288833832">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581285373552" />
+    <state width="1258" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581288833832" />
     <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1581279218111">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -156,5 +174,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="976" y="432" width="607" height="536" key="find.popup/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581283952263" />
+    <state x="936" y="330" key="run.anything.popup" timestamp="1581287749771">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="936" y="330" key="run.anything.popup/0.0.2560.1400/2560.247.1920.1040/-1080.0.1080.1880@0.0.2560.1400" timestamp="1581287749771" />
   </component>
 </project>

@@ -17,10 +17,10 @@ import java.util.zip.ZipFile;
 
 
 public class FFMPEG {
-    Logger logger = Logger.getLogger(FFMPEG.class);
+    static Logger logger = Logger.getLogger(FFMPEG.class);
 
 
-    public String getFFPMEGLocation() {
+    public static String getFFPMEGLocation() {
         File dir = new File("ffmpeg");
         dir.mkdirs();
         File[] folders = dir.listFiles(File::isDirectory);
@@ -35,7 +35,7 @@ public class FFMPEG {
         return null;
     }
 
-    public boolean isFFMPEGAvailable() {
+    public static boolean isFFMPEGAvailable() {
         if (getFFPMEGLocation() == null) {
             logger.info("FFMPEG is not available.");
             return false;
@@ -45,7 +45,7 @@ public class FFMPEG {
         }
     }
 
-    public boolean downloadFFMPEG() {
+    public static boolean downloadFFMPEG() {
         //Download FFMPEG for Windows
         if (OSUtils.getOsType().equals("windows")) {
             String url = Constants.FFMPEGWindows;
@@ -66,7 +66,7 @@ public class FFMPEG {
         return Files.exists(Paths.get("ffmpeg"));
     }
 
-    private void unzip(final String zip, final File destination) throws IOException {
+    private static void unzip(final String zip, final File destination) throws IOException {
         File srcFile = new File(zip);
         if(destination.mkdir()){
             logger.info("FFMPEG directory not found; created at " + destination);
