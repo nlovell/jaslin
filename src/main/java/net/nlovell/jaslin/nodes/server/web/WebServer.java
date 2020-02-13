@@ -1,6 +1,6 @@
 package net.nlovell.jaslin.nodes.server.web;
 
-import net.nlovell.jaslin.nodes.server.mediaplayer.Jplayer;
+import net.nlovell.jaslin.nodes.server.web.handlers.HelloWorld;
 import net.nlovell.jaslin.tools.ConfigReader;
 import org.eclipse.jetty.server.Server;
 
@@ -23,6 +23,7 @@ public class WebServer {
     private Server getServer(){
         if(server==null){
             server = new Server(Integer.parseInt(ConfigReader.getConfigReader().getConfigOrDefault("PORT")));
+            server.setHandler(new HelloWorld());
         }
         return this.server;
     }
