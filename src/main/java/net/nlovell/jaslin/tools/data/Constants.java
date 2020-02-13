@@ -82,4 +82,7 @@ public class Constants {
             JBL1 + jeol +
             JBL1 + rssp + bold_1 + "S" + reset + "peaker " + bold_2 + "L" + bold_1 + "i" + reset + "nk " + bold_2 + "N" + reset + "etwork"+ jeol +
             JBL1 + rssp + rssp + nls + " by nlovell.net" + jeol;
+
+
+    public static final int PORT = 4571;
 }

@@ -9,8 +9,7 @@ import org.apache.log4j.Logger;
 public class Server {
 
     public Server() {
-        Jplayer jp = new Jplayer();
-        WebServer ws = new WebServer(jp);
+        WebServer ws = new WebServer();
 
         Logger logger = Logger.getLogger(Server.class);
 
