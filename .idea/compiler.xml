@@ -9,5 +9,8 @@
         <module name="jaslin" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jaslin" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

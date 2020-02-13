@@ -1,15 +1,24 @@
 package net.nlovell.jaslin.nodes.server.web;
 
 import net.nlovell.jaslin.nodes.server.mediaplayer.Jplayer;
+import org.eclipse.jetty.server.Server;
 
 /**
  * For serving web-pages upon request
  */
 public class WebServer {
-    private final Jplayer player;
 
-    public WebServer(Jplayer jplayer) {
-        this.player = jplayer;
+    Server server;
+
+    public WebServer() {
+
+    }
+
+    Server getServer(){
+        if(server==null){
+            server = new Server();
+        }
+        return this.server;
     }
 
 }
