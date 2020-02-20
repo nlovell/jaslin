@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/jaslin.iml" filepath="$PROJECT_DIR$/jaslin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/jaslin.iml" filepath="$PROJECT_DIR$/.idea/jaslin.iml" />
     </modules>
   </component>
 </project>
