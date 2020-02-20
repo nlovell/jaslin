@@ -23,3 +23,5 @@
 hs_err_pid*
 /ffmpeg/
 .idea/libraries/*
+design/JASLiN.vpp.bak_*
+.idea/dictionaries/*.xml
