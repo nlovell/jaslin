@@ -25,3 +25,4 @@ hs_err_pid*
 .idea/libraries/*
 design/JASLiN.vpp.bak_*
 .idea/dictionaries/*.xml
+.idea/workspace.xml
