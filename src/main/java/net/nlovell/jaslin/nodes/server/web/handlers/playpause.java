@@ -1,30 +1,61 @@
 package net.nlovell.jaslin.nodes.server.web.handlers;
 
+import net.nlovell.jaslin.nodes.server.mediaplayer.Jplayer;
 import org.eclipse.jetty.server.Request;
 import org.eclipse.jetty.server.handler.AbstractHandler;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-public class playpause extends AbstractHandler {
+@WebServlet(name = "HikesTodoServlet", urlPatterns = {"hikes"}, loadOnStartup = 1)
+public class playpause extends HttpServlet {
 
-    String body;
-    @Override
-    public void handle(String target,
-                       Request baseRequest,
-                       HttpServletRequest request,
-                       HttpServletResponse response) throws IOException, ServletException {
-        response.setContentType("text.html; charset=utf-8");
-        response.setStatus(HttpServletResponse.SC_OK);
+    // Not synchronized
+    private List<String> hikes = new ArrayList<>(Arrays.asList(
+            "Wonderland Trail", "South Maroon Peak", "Tour du Mont Blanc",
+            "Teton Crest Trail", "Everest Base Camp via Cho La Pass", "Kesugi Ridge"
+    ));
 
-        PrintWriter out = response.getWriter();
-        out.println("<h1> play pause </h1>");
-        if(body!=null){
-            out.println(body);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
+        response.getWriter().print(String.join("\n", this.hikes));
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
+        String hike = request.getParameter("hike");
+        if (hike == null) {
+            response.setStatus(400);
+            response.getWriter().print("Param 'hike' cannot be null.");
         }
-        baseRequest.setHandled(true);
+        else if (this.hikes.contains(hike)) {
+            response.setStatus(400);
+            response.getWriter().print("The hike '"+hike+"' already exists.");
+        }
+        else {
+            this.hikes.add(hike);
+            response.getWriter().print(String.join("\n", this.hikes));
+        }
+    }
+
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
+        String hike = request.getParameter("hike");
+        if (hike == null) {
+            response.setStatus(400);
+            response.getWriter().print("Param 'hike' cannot be null.");
+        }
+        else {
+            this.hikes.remove(hike);
+            response.getWriter().print(String.join("\n", this.hikes));
+        }
     }
 }
