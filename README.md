@@ -9,4 +9,4 @@
                ██  ██  ██  ██  ██  ██  ██  ██  ██  
                ██                                  
                ██  Speaker Link Network            
-               ██     by nlovell.net             ``
+               ██     by nlovell.net

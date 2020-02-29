@@ -2,7 +2,6 @@ package net.nlovell.jaslin.nodes.server;
 
 import net.nlovell.jaslin.nodes.common.CLI;
 import net.nlovell.jaslin.nodes.common.FFMPEG;
-import net.nlovell.jaslin.nodes.server.mediaplayer.Jplayer;
 import net.nlovell.jaslin.nodes.server.web.WebServer;
 import org.apache.log4j.Logger;
 
