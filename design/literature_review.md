@@ -6,16 +6,14 @@
 [comment]: # ( - Markdown TOC)
 
 <p align="center"> <img src=img/jaslin_transparent.png />  
-<p align="center"> [en: /jæs-l?n/]
+<p align="center"> [en: /jæs-lɪn/]
 <p align="center"><font size=-5 color=gray> by nlovell.net</font>
 
 ---
-
-<!-- TOC -->
-
 - [1. Just Another Speaker Link Network](#1-just-another-speaker-link-network)
+  - [- 1.4. Conclusion](#ul-li14-conclusionli-ul)
   - [1.0.1. Project Context](#101-project-context)
-  - [1.1. Literature Review](#11-literature-review)
+  - [1.1.  Literature Review](#11-literature-review)
     - [1.1.1. Introduction](#111-introduction)
     - [1.1.2. Approach Overview](#112-approach-overview)
   - [1.2. Audio Server](#12-audio-server)
@@ -30,9 +28,6 @@
     - [Offline Compatibility](#offline-compatibility)
     - [Web Browsers](#web-browsers)
   - [1.4. Conclusion](#14-conclusion)
-
-<!-- /TOC -->
-
 ---
 
 ## 1.0.1. Project Context  
@@ -72,7 +67,7 @@ Fundamentally, the audio server takes an audio stream and broadcasts it to clien
 There are a lot of different audio formats which could be provided to the System, and very few of them are a mystery to me. As a hobbyist audiophile I have a deep personal understanding of different formats and their benefits and drawbacks. For the purpose of this assignment, I will be sure to limit my file compatibility testing to just MP3 and FLAC, as both of these formats offer free encoders and decoders for commercial use such as LAME for MP3 and Xiph for FLAC, along with being among the most popular audio formats worldwide.
 
  ![Format summary from WhatHifi](img/whathififormats.jpg "Format Summary")
-_Figure 2: A summary of formats from WhatHifi [^6] (2019)_  
+_Figure 2: A summary of formats from WhatHifi <sup>[^6]</sup> (2019)_  
 While I cannot upload copyrighted music within my code as file tests, I can generate my own audio to export a variety of formats to ensure compatibility. Legally, I can use my personal collection for testing without breaching any legislation.
 
  ![Exporting Audio](img/exportingaudio.png "Exporting Audio with Audacity")
@@ -81,11 +76,11 @@ Unless I only provide an implementation for digital data files, Analogue to Digi
 
 ### 1.2.2. Data Transmission Technologies
 
-There are several different approaches which I could take to transmitting the audio data - Digital Audio Broadcast—commonly referred to as “_DAB radios_”—have been around for a while, and offer one method of broadcasting audio. This does, however, have drawbacks in the fact that very few people have direct access to DAB radio hardware. In contrast, 93% of households in the UK have internet access (Prescott[^5], 2019).  
+There are several different approaches which I could take to transmitting the audio data - Digital Audio Broadcast—commonly referred to as “_DAB radios_”—have been around for a while, and offer one method of broadcasting audio. This does, however, have drawbacks in the fact that very few people have direct access to DAB radio hardware. In contrast, 93% of households in the UK have internet access (Prescott<sup>[^5]</sup>, 2019).  
 
 ![Average Houshold Internet Access](img/householdusage.png "Average internet accesses UK")  
-We can assume from this that a similar percentage of households host their own local-area network and WiFi router. Modern WiFi protocols, such as 802.11ac, allow for theoretical limits of 866.7Mbps transfer speeds according to the IEEE protocol specification (IEEE Standard for Information Technology[^3], 2013); however testing sustained average varies by specific application. One test conducted by Kaewkiriya[^4] (2017) produces stable sustained bandwidths of 16.6 Mb/s, however Dolinska[^2] (et al, 2019) tested 802.11ac successfully at 93.7 Mb/s. While it is a broad stroke to assume that approximately 90% of the UK have access to a LAN with 802.11ac WiFi connectivity, it should be fairly reasonable to assume the types of people interested in an esoteric open-source audio streaming platform would have this. An alternative would be Bluetooth – this does accommodate the master/slave architecture required of the proposed system, however there are limitations to this – including bandwidth, which is limited to 2 Mb/s according to the Bluetooth Core Specifications (Bluetooth.com[^1], 2019). While this would be acceptable for a single CD-quality audio stream, as this can be compressed to FLAC using LAME to approximately 800 Kb/s, it may struggle with higher resolution audio streams such as “_studio masters_” at 24-bit 96khz, or direct analogue streaming (such as from a turntable). This would make Bluetooth a poor choice for real-time data transfer.  
-When using internet protocol to transmit data within a local network, there are several different transmission methods that could be utilised within an audio streaming context; User Datagram Protocol (UDP) and Transmission Control Protocol (TCP/IP) are two such examples. TCP embeds metadata within packets in order to ensure that all the packets are received in the order they are sent – for this to occur, especially on a wireless network which cannot guarantee perfect transmissions, timeouts and retransmission strategies are required. This adds overhead to the data transmissions, both in terms of time and the size of data being sent. For this reason, TCP is cited as a cumbersome protocol, and Vincent[^7] (2018) describes the UDP protocol as “_more efficient than TCP and used for real-time communication (audio, video) […]_” and, as a result, “_[…] is preferable to the overhead of a TCP connection_”. This is backed up by section 6.3 of the AES Standards document for High-Performance streaming Audio-over-IP interoperability document (AES[^10], 2015) which states that devices shall use UDP in order to implement AES67 successfully.
+We can assume from this that a similar percentage of households host their own local-area network and WiFi router. Modern WiFi protocols, such as 802.11ac, allow for theoretical limits of 866.7Mbps transfer speeds according to the IEEE protocol specification (IEEE Standard for Information Technology[^3]</sup>, 2013); however testing sustained average varies by specific application. One test conducted by Kaewkiriya[^4]</sup> (2017) produces stable sustained bandwidths of 16.6 Mb/s, however Dolinska[^2]</sup> (et al, 2019) tested 802.11ac successfully at 93.7 Mb/s. While it is a broad stroke to assume that approximately 90% of the UK have access to a LAN with 802.11ac WiFi connectivity, it should be fairly reasonable to assume the types of people interested in an esoteric open-source audio streaming platform would have this. An alternative would be Bluetooth – this does accommodate the master/slave architecture required of the proposed system, however there are limitations to this – including bandwidth, which is limited to 2 Mb/s according to the Bluetooth Core Specifications (Bluetooth.com[^1]</sup>, 2019). While this would be acceptable for a single CD-quality audio stream, as this can be compressed to FLAC using LAME to approximately 800 Kb/s, it may struggle with higher resolution audio streams such as “_studio masters_” at 24-bit 96khz, or direct analogue streaming (such as from a turntable). This would make Bluetooth a poor choice for real-time data transfer.  
+When using internet protocol to transmit data within a local network, there are several different transmission methods that could be utilised within an audio streaming context; User Datagram Protocol (UDP) and Transmission Control Protocol (TCP/IP) are two such examples. TCP embeds metadata within packets in order to ensure that all the packets are received in the order they are sent – for this to occur, especially on a wireless network which cannot guarantee perfect transmissions, timeouts and retransmission strategies are required. This adds overhead to the data transmissions, both in terms of time and the size of data being sent. For this reason, TCP is cited as a cumbersome protocol, and Vincent[^7]</sup> (2018) describes the UDP protocol as “_more efficient than TCP and used for real-time communication (audio, video) […]_” and, as a result, “_[…] is preferable to the overhead of a TCP connection_”. This is backed up by section 6.3 of the AES Standards document for High-Performance streaming Audio-over-IP interoperability document (AES[^10]</sup>, 2015) which states that devices shall use UDP in order to implement AES67 successfully.
 
 ### 1.2.3. User Controls
 
@@ -103,7 +98,7 @@ Considering platform agnosticism as the ultimate goal for this, it would only ma
 
 ## 1.3. Client Nodes
 
-Once the audio has been broadcast from the server, the client nodes have the role to interpret this information and play it back. This will, essentially, be comprised of three elements.  
+Once the audio has been broadcast from the server, the client nodes have the role to interpret thi1s information and play it back. This will, essentially, be comprised of three elements.  
 
 1. Receiving/decoding the audio data
 2. Playing the audio data  
@@ -111,7 +106,7 @@ Once the audio has been broadcast from the server, the client nodes have the rol
 
 ### 1.3.1. Playing back Audio
 
-Streaming audio data and playing it back in realtime would require a transcoder, and while my knowledge on how to produce one of these is limited, thankfully such technologies already exist – FFMPEG, the free audiovisual codec library, provides functionality for this already. (source: [FFMPEG Streaming Guide](https://trac.ffmpeg.org/wiki/StreamingGuide)) There may be alternatives to this; however I will not consider them. FFMPEG is a free and open-source codec, which is implemented by both freewares like MusicBee, and high-end audio playback software such as Jriver (Jriver 2019 [^9]). The hardware requirements for FFMPEG are minimal – while I cannot find any “_minimum specification_” officially published by the group, Whitmore (2011 [^8]) comments on this issue with “_I can run ffmpeg on my wireless router so it can really run on anything__”. This alleviates my concern for minimum running requirements for the codec in question.  
+Streaming audio data and playing it back in realtime would require a transcoder, and while my knowledge on how to produce one of these is limited, thankfully such technologies already exist – FFMPEG, the free audiovisual codec library, provides functionality for this already. (source: [FFMPEG Streaming Guide](https://trac.ffmpeg.org/wiki/StreamingGuide)) There may be alternatives to this; however I will not consider them. FFMPEG is a free and open-source codec, which is implemented by both freewares like MusicBee, and high-end audio playback software such as Jriver (Jriver 2019 [^9]</sup>). The hardware requirements for FFMPEG are minimal – while I cannot find any “_minimum specification_” officially published by the group, Whitmore (2011 [^8]</sup>) comments on this issue with “_I can run ffmpeg on my wireless router so it can really run on anything__”. This alleviates my concern for minimum running requirements for the codec in question.  
 
 ### 1.3.2. Playback synchronisation
 
@@ -134,15 +129,15 @@ Given the significant design precidence that has been set across every platform 
 
 ### Offline Compatibility
 
-The interface will be, as discussed earlier, a web-controlled frontend which should enable users of JASLiN to be able to control the System from a laptop, computer, mobile phone, or a smart-fridge with a compatible browser. If the application is built with correct considerations, it can be delivered as a progressive web-app, which will allow the JASLiN UI to be downloaded to the user's device as if it were a native application, offering seamless. An alternative method for desktop utility would be to distribute it as a binary .exe container, which can be ran/installed as if it were a native Windows application. Two examples of modern programs which do this are Discord (a popular IRC-type application) and Visual Studio Code, both of which achieve this functionality through Electron (2020 [^14]). This will allow the application's frontend to be developed with the ease, flexibility, and compatibility of any standard website.
+The interface will be, as discussed earlier, a web-controlled frontend which should enable users of JASLiN to be able to control the System from a laptop, computer, mobile phone, or a smart-fridge with a compatible browser. If the application is built with correct considerations, it can be delivered as a progressive web-app, which will allow the JASLiN UI to be downloaded to the user's device as if it were a native application, offering seamless. An alternative method for desktop utility would be to distribute it as a binary .exe container, which can be ran/installed as if it were a native Windows application. Two examples of modern programs which do this are Discord (a popular IRC-type application) and Visual Studio Code, both of which achieve this functionality through Electron (2020 [^14]</sup>). This will allow the application's frontend to be developed with the ease, flexibility, and compatibility of any standard website.
 
 ### Web Browsers
 
 As of 2020, there are many different web browsers available, all of which render HTML elements subtly differently to eachother. Testing compatibility with even a handful of the current available browsers will take a considerable ammount of time. There's Google Chrome, Safari, Internet Explorer, Firefox, Opera, Opera GX, Chromium, Vivaldi, TOR, and many more presently available.  
 
 ![W3Counter Browser Market Share statistics](img/w3count_stats.png "W3Counter Browser Market Share statistics")
-_Source: W3Counter, 2020 [^13]_.  
-StatCounter (2020 [^11]), Setic (2020 [^12]), and W3Counter (2020, [^13]) suggests that of all currently available web-browsers, approximately half the current "market share" of web-browsers comes from Google Chrome.
+_Source: W3Counter, 2020 <sup>[^13]</sup>_.  
+StatCounter (2020 <sup>[^11]</sup>), Setic (2020 <sup>[^12]</sup>), and W3Counter (2020, <sup>[^13]</sup>) suggests that of all currently available web-browsers, approximately half the current "market share" of web-browsers comes from Google Chrome.
 
 ## 1.4. Conclusion
 
